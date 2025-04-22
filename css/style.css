@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  height: 100vh;
+}
+
+header {
+  padding: 8px;
+}
+
+main {
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+}
+main button {
+  border: solid 1px silver;
+  padding: 8px;
+}
+main button:hover {
+  background-color: rgb(140, 165, 172);
+}
+main .selecionado {
+  background-color: red;
+}
+main .selecionado:hover {
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 10% 90%;
+
+    height: 100vh;
+}
+
+
+
+header {
+    padding: 8px;
+}
+
+main {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+
+    button {
+        border: solid 1px silver;
+        padding: 8px;
+    }
+
+    button:hover {
+        background-color: rgb(140, 165, 172);
+    }
+
+    .selecionado {
+        background-color: red;
+    }
+
+    .selecionado:hover {
+        background-color: red;
+    }
+}
