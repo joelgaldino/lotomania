@@ -1,9 +1,9 @@
 import { app } from "./modules/app.mjs";
 
-try {
-    const sistema = new app();
-} catch (error) {
-    console.log(error);
-}
+const sistema = new app();
 
+const reset = document.querySelector('#reset');
 
+reset.addEventListener('click', () => {
+    sistema.reset();
+});

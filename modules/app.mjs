@@ -1,11 +1,10 @@
 export class app {
 
     volante = [];
+    total_volante = 0;
 
     constructor() {
         this.tela()
-        this.botoes()
-        this.reset()
     }
 
     tela() {
@@ -18,9 +17,12 @@ export class app {
         }
 
         app.innerHTML = bloco;
+
+        this.#botoes();
+        this.#total();
     }
 
-    botoes() {
+    #botoes() {
         const botoes = document.querySelectorAll('main button');
 
         botoes.forEach((e) => {
@@ -42,21 +44,25 @@ export class app {
                         this.volante.pop(e.value);
                     }
                 }
+                this.#total();
             })
         })
     }
 
-    reset() {
-        const reset = document.querySelector('#reset');
+    #total() {
+        this.total_volante = this.volante.length;
+        const total = document.querySelector('#total');
+        total.innerHTML = this.total_volante;
+    }
 
-        reset.addEventListener('click', () => {
-            this.volante = [];
-            const botoes = document.querySelectorAll('main button');
-            botoes.forEach((e) => {
-                e.classList.remove('numero');
-                e.classList.remove('selecionado');
-                e.classList.add('numero');
-            })
+    reset() {
+        this.volante = [];
+        const botoes = document.querySelectorAll('main button');
+        botoes.forEach((e) => {
+            e.classList.remove('numero');
+            e.classList.remove('selecionado');
+            e.classList.add('numero');
         })
+        this.#total();
     }
 }
