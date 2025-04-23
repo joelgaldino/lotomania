@@ -1,3 +1,5 @@
+const total = document.querySelector('#total');
+
 export class app {
 
     volante = [];
@@ -51,7 +53,6 @@ export class app {
 
     #total() {
         this.total_volante = this.volante.length;
-        const total = document.querySelector('#total');
         total.innerHTML = this.total_volante;
     }
 
