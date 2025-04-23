@@ -2,8 +2,10 @@ import { app } from "./modules/app.mjs";
 
 const sistema = new app();
 
-const reset = document.querySelector('#reset');
-
-reset.addEventListener('click', () => {
+document.querySelector('#reset').addEventListener('click', () => {
     sistema.reset();
+});
+
+document.querySelector('#palpite').addEventListener('click', () => {
+    sistema.palpite();
 });
